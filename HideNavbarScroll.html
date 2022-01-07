@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Navbar on scrolling down the page</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            font-family: poppins;
+        }
+        #navbar{
+            background-color: #333;
+            padding: 0px 12px 0px 0px;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            transition: top 0.3s;
+        }
+        #navbar a{
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            padding: 12px 17px;
+            float: left;
+        }
+        #navbar a:hover,#navbar a.active{
+            background-color: #eee;
+            color: black;
+            cursor: pointer;
+        }
+        h1{
+            color: #04aafd;
+            margin: 50px 0px;
+            font-size: 3rem;
+            border-bottom: 1px solid #333;
+        }
+        p{
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+        .content{
+            padding: 4.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="content">
+        <div id="home">
+        <h1>Home</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, modi odio pariatur quisquam est delectus aliquam qui accusamus architecto, ut dolore cumque dolores eaque placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cum temporibus fugit similique ipsam ullam eveniet nam quae repellat, corrupti voluptatum repudiandae praesentium ab. Sunt fugiat officiis natus eveniet laboriosam quis voluptatem iure eum nam corrupti dolor, ad vero nihil sapiente alias cum ducimus dolores, explicabo eligendi accusamus veritatis veniam!</p>
+        </div>
+        <div id="news">
+        <h1>News</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, modi odio pariatur quisquam est delectus aliquam qui accusamus architecto, ut dolore cumque dolores eaque placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cum temporibus fugit similique ipsam ullam eveniet nam quae repellat, corrupti voluptatum repudiandae praesentium ab. Sunt fugiat officiis natus eveniet laboriosam quis voluptatem iure eum nam corrupti dolor, ad vero nihil sapiente alias cum ducimus dolores, explicabo eligendi accusamus veritatis veniam!</p>
+        </div>
+        <div id="contact">
+        <h1>Contact</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, modi odio pariatur quisquam est delectus aliquam qui accusamus architecto, ut dolore cumque dolores eaque placeat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cum temporibus fugit similique ipsam ullam eveniet nam quae repellat, corrupti voluptatum repudiandae praesentium ab. Sunt fugiat officiis natus eveniet laboriosam quis voluptatem iure eum nam corrupti dolor, ad vero nihil sapiente alias cum ducimus dolores, explicabo eligendi accusamus veritatis veniam!</p>
+        </div>
+    </div>
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function(){
+            var currentScrollpos = window.pageYOffset;
+            if(prevScrollpos>currentScrollpos){
+                document.getElementById("navbar").style.top = '0';
+            }else{
+                document.getElementById("navbar").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollpos;
+        }
+    </script>
+</body>
+</html>

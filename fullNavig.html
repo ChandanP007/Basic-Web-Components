@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full screen Navigation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: poppins;
+      }
+      h3 {
+        font-size: 3em;
+      }
+      .container {
+        padding: 5rem;
+        background-color: #ccc;
+        box-shadow: dimgrey 0px 10px 15px 0px;
+      }
+      .btn {
+        padding: 12px 14px;
+        margin: 12px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        font-size: 15px;
+        background-color: crimson;
+        color: white;
+        transition: 0.3s;
+      }
+      .btn:hover {
+        cursor: pointer;
+        border: 1px solid crimson;
+        background: none;
+        color: crimson;
+      }
+      .overlay{
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          background-color: rgb(0,0,0);
+          background-color: rgb(0,0,0,0.9);
+          overflow-x: hidden;
+          transition: 0.5s;
+      }
+      .overlay-content{
+          position: relative;
+          top: 25%;
+          width: 100%;
+          text-align: center;
+          margin-top: 30px;
+      }
+      .overlay a{
+          padding: 8px;
+          text-decoration: none;
+          font-size: 36px;
+          color: white;
+          display: block;
+          transition: 0.3s;
+      }
+      .overlay a:hover, .overlay a:focus{
+          color: #2196f2;
+      }
+      .overlay .closebtn{
+          position: absolute;
+          top: 20px;
+          right: 45px;
+          font-size: 60px;
+          background: none;
+          border: none;
+          color: white;
+          outline: none;
+          cursor: pointer;
+      }  
+      @media screen and (max-height: 450px){
+          .overlay a{font-size: 20px;}
+          .overlay .closebtn{
+              font-size: 40px;
+              top: 15px;
+              right: 35px;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The overlay  -->
+    <div id="myNav" class="overlay">
+      <!-- Close button  -->
+      <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        &times;
+      </button>
+
+      <!-- Overlay content  -->
+      <div class="overlay-content">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>Click on the buttons below to see how it works :</h3>
+      <button class="btn" onclick="openNavRight()">Slide Right</button
+      ><button class="btn" onclick="openDown()">Slide Down</button
+      ><button class="btn" onclick="show()">Show(No animation)</button>
+    </div>
+
+    <script>
+        function closeNav(){
+            document.getElementById("myNav").style.width= "0";
+        }
+        function openNavRight(){
+            document.getElementById("myNav").style.width= "100%";
+        }
+        function openDown(){ 
+            document.getElementById("myNav").style.height= "100%"; 
+        }
+        function show(){
+            document.getElementById("myNav").style.display= "block%";
+        }
+    </script>
+  </body>
+</html>

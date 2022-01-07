@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Navigation</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            font-family: poppins;
+        }
+        .navbar{
+            background-color: #333;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            overflow: hidden;
+        }
+        .navbar a{
+            color: white;
+            text-decoration: none;
+            float: left;
+            padding: 12px;
+            font-size: 17px;
+        }
+        .navbar a:hover,.active{    
+            background-color: #0aa46d;
+        }
+        @media screen and (max-width: 500px){
+            .navbar a{
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>  
+    </div>
+</body>
+</html>

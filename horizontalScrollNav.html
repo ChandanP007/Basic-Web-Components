@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scrollable Menu</title>
+    <style>
+        /* The trick to add scrollable navigation is by using overflow:auto and white-space: nowrap; in css  */
+        div.scrollmenu{
+            background-color: #333;
+            overflow: auto;
+            white-space: nowrap;
+        }
+        div.scrollmenu a{
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            padding: 14px;
+            /* font-size: 25px; */
+            /* float: left; */
+        }
+        div.scrollmenu a:hover{
+            background-color: crimson;
+            cursor: pointer;
+        }
+        .scrollmenu p{
+            color: white;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollmenu">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus natus ad assumenda itaque, eligendi explicabo est quam, nisi praesentium reprehenderit tenetur dignissimos? Repudiandae magni incidunt, hic labore neque doloremque! Ut asperiores obcaecati sed vel.</p>
+    </div>
+
+</body>
+</html>

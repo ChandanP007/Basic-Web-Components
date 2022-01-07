@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Bottom Navigation</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            font-family: poppins;
+        }
+        .navbar{
+            background-color: #333;
+            width: 100%;
+            overflow: hidden;
+            bottom: 0;
+            position: fixed;
+        }
+        .navbar a{
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            font-size: 17px;
+            float: left;
+        }
+        .navbar a:hover,.active{
+            background-color: #b10542;
+        }
+        .icon{
+            display: none;
+        }
+        /* media queries  */
+        @media screen and (max-width: 600px){
+            .navbar a:not(:first-child){display: none;}
+            .navbar a.icon{
+                display: block;
+                float: right;
+            } 
+        }
+        /* This responsive class is added to the navbar with JS when the user clicks on the icon. This class makes the navbar look good on small screens.  */
+        @media screen and (max-width: 600px){
+            .navbar.responsive a.icon{
+                position: absolute;
+                right: 0;bottom: 0;
+            }
+            .navbar.responsive a{
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar" id="myNavbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script>
+        // toggle between adding and removing responsive class to the navbar when the user clicks on the icon 
+        function myFunction(){
+            var x= document.getElementById("myNavbar");
+            if(x.className === "navbar"){
+                x.className += "responsive";
+            }
+            else{
+                x.className="navbar";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Menu</title>
+    <style>
+        *{
+            font-family: poppins;
+            margin: 0;padding: 0;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .navbar{
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            padding: 10px 0px;
+            width: 100%;
+            /* position: fixed; */
+        }
+        .navbar a{
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .navbar a:hover,.active{
+            background-color: #04aa9d;
+
+        }
+        .nav-right{
+            float: right;
+        }
+        .nav-left{
+            float: left;
+        }
+        .content{
+            padding-top: 8rem;
+        }
+        h2{
+            font-size: 4rem;
+            color: #04aa9d;
+            padding: 2rem 0rem;
+            text-align: center;
+        }
+        p{
+            padding: 8rem 15rem;
+            font-size: 20px;
+            
+        }
+        #home,#news,#contact{
+            height: 100vh;
+            text-align: center;
+            align-items: center;
+            /* border-bottom: 1px solid #04aa9d; */
+            /* padding: 0rem 8rem; */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-left">
+        <a href="#home" class="active" onclick="activAte(this)">Home</a>
+        <a href="#news" onclick="activAte(this)">News</a>
+        <a href="#contact" onclick="activAte(this)">Contact</a>
+        </div>
+
+        <div class="nav-right">
+            <a href="#">SignIn</a>
+            <a href="#">Login</a>
+        </div>
+    </div>
+    <div class="content">
+        <div id="home">
+        <h2>Home</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium possimus ex quae eaque. Perspiciatis quam doloribus tenetur, nobis aliquid eos quibusdam facilis aliquam harum esse! Perferendis pariatur repellendus quisquam magnam error repellat aspernatur quae ad, hic eum cumque id quidem est repudiandae, dolor praesentium itaque. Architecto nobis possimus autem nulla cumque pariatur a officia ipsam odio veritatis iure omnis, ipsum voluptatibus, illum provident ex perferendis soluta blanditiis rem nisi unde! Temporibus similique velit, maiores omnis culpa natus praesentium quod nulla aperiam obcaecati adipisci tenetur, odit tempore, itaque molestiae consectetur earum nam! Unde vero laboriosam sunt consectetur suscipit maiores repellat inventore!</p>
+        </div>
+        <div id="news">
+        <h2>News</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium possimus ex quae eaque. Perspiciatis quam doloribus tenetur, nobis aliquid eos quibusdam facilis aliquam harum esse! Perferendis pariatur repellendus quisquam magnam error repellat aspernatur quae ad, hic eum cumque id quidem est repudiandae, dolor praesentium itaque. Architecto nobis possimus autem nulla cumque pariatur a officia ipsam odio veritatis iure omnis, ipsum voluptatibus, illum provident ex perferendis soluta blanditiis rem nisi unde! Temporibus similique velit, maiores omnis culpa natus praesentium quod nulla aperiam obcaecati adipisci tenetur, odit tempore, itaque molestiae consectetur earum nam! Unde vero laboriosam sunt consectetur suscipit maiores repellat inventore!</p>
+        </div>
+        <div id="contact">
+        <h2>Contact</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium possimus ex quae eaque. Perspiciatis quam doloribus tenetur, nobis aliquid eos quibusdam facilis aliquam harum esse! Perferendis pariatur repellendus quisquam magnam error repellat aspernatur quae ad, hic eum cumque id quidem est repudiandae, dolor praesentium itaque. Architecto nobis possimus autem nulla cumque pariatur a officia ipsam odio veritatis iure omnis, ipsum voluptatibus, illum provident ex perferendis soluta blanditiis rem nisi unde! Temporibus similique velit, maiores omnis culpa natus praesentium quod nulla aperiam obcaecati adipisci tenetur, odit tempore, itaque molestiae consectetur earum nam! Unde vero laboriosam sunt consectetur suscipit maiores repellat inventore!</p>
+        </div>
+    </div>
+    <script>
+       
+    </script>
+</body>
+</html>

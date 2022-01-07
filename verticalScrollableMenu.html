@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertical Scroll Menu</title>
+    <style>
+        *{
+            font-family: poppins;
+            margin: 0;padding: 0;
+        }
+        .navbar{
+            background-color: #333;
+            width: 100%;
+            overflow: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .navbar a{
+            text-decoration: none;
+            text-align: center;
+            float: left;
+            color: white;
+            padding: 14px;
+            font-size: 1.2rem;
+            margin: 0px 15px;
+            transition: 0.2s;
+        }
+        .navbar a:hover{
+          color: #04aa6d;
+        }
+        .vertical-menu{
+            width: 270px;
+            height: 90vh;
+            overflow-y: auto;
+            clear: left;
+        }
+        .vertical-menu a{
+            background-color: #eee;
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 12px;
+            text-align: center;
+        }
+        .vertical-menu a:hover{
+            background-color: #04aa6d;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+      <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Clients</a>
+        <a href="#">About</a><a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </div>
+    <div class="vertical-menu">
+      <a href="#">Html</a>
+      <a href="#">CSS</a>
+      <a href="#">Javascript</a>
+      <a href="">Bootstrap</a>
+      <a href="">Tailwind</a>
+      <a href="">Node.js</a>
+      <a href="">Express.js</a>
+      <a href="">Pug</a>
+      <a href="">Vnilla js</a>
+      <a href="">MongoDB</a>
+      <a href="">Firebase</a>
+      <a href="">jQuery</a>
+      <a href="">Asp</a>
+      <a href="#">Html</a>
+      <a href="#">CSS</a>
+      <a href="#">Javascript</a>
+      <a href="">Bootstrap</a>
+      <a href="">Tailwind</a>
+      <a href="">Node.js</a>
+      <a href="">Express.js</a>
+      <a href="">Pug</a>
+      <a href="">Vnilla js</a>
+      <a href="">MongoDB</a>
+      <a href="">Firebase</a>
+      <a href="">jQuery</a>
+      <a href="">Asp</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!-- Fixed Sidebar  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIDE BAR</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            font-family: poppins;
+        }
+        .sidenav{
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #ccc;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        .sidenav a{
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            display: block;
+            color: black;
+        }
+        .sidenav a:hover{
+            letter-spacing: 2px;
+            color: white;
+            background-color: rgb(235, 10, 55);
+        }
+        .main{
+            margin-left: 250px;
+            padding: 10px 10px;
+            display: none;
+        }
+        .galleryContainer{
+            display: grid;
+            grid-template-columns: 3;
+    
+            margin: 10px 10px;
+            
+        }
+        .box{
+            background-color: deeppink;
+            color : white;
+            height: 100px;width: 100px;
+            border: 1px solid black;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin: 0px 5px;
+        }
+
+        @media screen and (max-width: 450px){
+            .sidenav{
+               width: 100vw;
+               height: 35px;
+               display: inline;
+               margin: 0;padding: 0;
+               
+            }
+            .sidenav a{
+                font-size: 15px;
+                display: inline-block;
+            }
+            .main{
+                margin-left: 0px;
+                width: 100vw;
+                margin-top: 45px;
+                padding: 0px 10px;
+                display: none;
+            }
+            
+        }
+    </style>
+  </head>
+  <body>
+    <div class="sidenav">
+      <a href="#" class="href" onclick="show('home')">Home</a>
+      <a href="#" class="href" onclick="show('about')">About</a>
+      <a href="#" class="href" onclick="show('services')">Services</a>
+      <a href="#" id="active" onclick="show('gallery')">Gallery</a>
+    </div>
+
+    <!-- page content  -->
+    <div class="main" id="home">
+        <h1>Welcome</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel soluta odit unde numquam veritatis dolores molestias quia ducimus similique iusto veniam ex totam fuga accusamus rerum eligendi porro ad, architecto blanditiis iste fugiat magni?</p>
+    </div>
+    <div id="about" class="main">
+        <h1>About</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit hic, at sed, qui tempora neque dolorem magnam nihil non quis recusandae voluptate aperiam nesciunt asperiores blanditiis. Laboriosam, nesciunt. Recusandae veniam facere totam impedit. Deserunt, mollitia! Deleniti nemo molestias dicta, voluptatum totam earum nam reiciendis nisi?</p>
+    </div>
+    <div class="main" id="services">
+        <h1>Services</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore quibusdam eum laborum perspiciatis possimus animi! Ullam iure vitae, quod cupiditate, fugit, a nulla consequuntur ratione inventore unde modi impedit ducimus! Impedit architecto ut aliquid molestiae eius delectus inventore pariatur voluptatem.</p>
+    </div>
+    <div class="main" id="gallery">
+        <h1>Gallery</h1>
+        <div class="galleryContainer">
+            <div class="box">PIC 1</div>
+            <div class="box">PIC 2</div>
+            <div class="box">PIC 3</div>
+            <div class="box">PIC 4</div>
+            <div class="box">PIC 5</div>
+            <div class="box">PIC 6</div>
+            <div class="box">PIC 7</div>
+            <div class="box">PIC 8</div>
+            <div class="box">PIC 9</div>
+        
+    </div>
+    
+    <script>
+        function show(pageName){
+            //Declare all variables
+            var i,main,link;
+            main= document.getElementsByClassName("main");
+            link= document.getElementsByTagName("a");
+            
+            //Hide all elements
+            for(i=0;i<main.length;i++){
+                main[i].style.display= "none";
+            }
+
+            //show specific 
+            document.getElementById(pageName).style.display= "block";
+        }document.getElementById("active").click();
+    </script>
+  </body>
+</html>

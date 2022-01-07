@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrink Navigation on scroll</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            font-family: poppins;
+        }
+        #navbar{
+            background-color: #f1f1f1;
+            padding: 90px 10px;
+            overflow: hidden;
+            transition: 0.4s;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+        }
+        #navbar a{
+            float: left;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 12px;
+            text-align: center;
+            border-radius: 4px;
+            line-height: 25px;
+        }
+        #navbar #logo{
+            font-size: 36px;
+            font-weight: bold;
+            transition: 0.4s;
+            font-family: cambria;
+        }
+        #navbar a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+        #navbar a.active{
+            background-color: dodgerblue;
+            color: white;
+        }
+        .navRight{
+            float: right;
+        }
+        #home,#News,#Contact{
+               height: 50vh;
+           }
+
+        @media screen and (max-width: 500px){
+            #navbar{
+                padding: 20px 10px !important;
+            }
+            #navbar a{
+                float: left;
+                text-align: left;
+            }
+            #logo{
+                display: block;
+                font-size: 20px;
+            }
+            .navRight{
+                float: none;
+            }
+            .navRight a{
+                display: block;
+                width: 100%;
+                
+            }
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="#default" id="logo">Company logo</a>
+        <div class="navRight">
+            <a href="#" class="active">Home</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="content">
+        <div id="home">
+            <h1>Home</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem omnis aliquam quod temporibus quo officiis itaque impedit vitae voluptates recusandae, tempore voluptatem quisquam suscipit distinctio cum? Iusto esse, consequuntur totam dolorum minima et rem quis, temporibus aperiam aliquid incidunt sit ad velit quos at nostrum minus. Eaque maxime facilis recusandae?</p>
+        </div>
+        <div id="News">
+            <h1>News</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem omnis aliquam quod temporibus quo officiis itaque impedit vitae voluptates recusandae, tempore voluptatem quisquam suscipit distinctio cum? Iusto esse, consequuntur totam dolorum minima et rem quis, temporibus aperiam aliquid incidunt sit ad velit quos at nostrum minus. Eaque maxime facilis recusandae?</p>
+        </div>
+        <div id="Contact">
+            <h1>Contact</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem omnis aliquam quod temporibus quo officiis itaque impedit vitae voluptates recusandae, tempore voluptatem quisquam suscipit distinctio cum? Iusto esse, consequuntur totam dolorum minima et rem quis, temporibus aperiam aliquid incidunt sit ad velit quos at nostrum minus. Eaque maxime facilis recusandae?</p>
+        </div>
+    </div>
+
+    <script>
+        window.onscroll = function() {scrollfunction()};
+
+        function scrollfunction(){
+            if(document.body.scrollTop>80 || document.documentElement.scrollTop>80){
+                document.getElementById("navbar").style.padding= "30px 10px";
+                document.getElementById("logo").style.fontSize = "25px";
+            }else{
+                document.getElementById("navbar").style.padding= "80px 10px";
+                document.getElementById("logo").style.fontSize = "35px";
+            }
+        }
+    </script>
+</body>
+</html>

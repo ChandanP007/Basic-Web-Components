@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FULL PAGE TABS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      .tablinks {
+        background-color: #555;
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        float: left;
+        width: 25%;
+        font-size: 17px;
+      }
+      .tablinks:hover {
+        background-color: #777;
+      }
+      .tabcontent {
+        color: black;
+        display: none;
+        padding: 100px 20px;
+        height: 100vh;
+        line-height: 10rem;
+      }
+      h3 {
+        font-size: 4rem;
+        color: white;
+      }
+      p {
+        font-size: 2.5rem;
+        color: lightgrey;
+      }
+
+      #Home {
+        background-color: red;
+      }
+      #News {
+        background-color: green;
+      }
+      #Contact {
+        background-color: skyblue;
+      }
+      #About {
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation  -->
+    <button
+      class="tablinks"
+      onclick="openPage('Home',this,'red')"
+      id="defaultOpen"
+    >
+      Home
+    </button>
+    <button class="tablinks" onclick="openPage('News',this,'green')">
+      News</button
+    ><button class="tablinks" onclick="openPage('Contact',this,'skyblue')">
+      Contact
+    </button>
+    <button class="tablinks" onclick="openPage('About',this,'yellowgreen')">
+      About
+    </button>
+
+    <!-- Page Content -->
+    <div id="Home" class="tabcontent">
+      <h3>Home</h3>
+      <p>Home is where the heart is...</p>
+    </div>
+    <div id="News" class="tabcontent">
+      <h3>News</h3>
+      <p>Some news this fine day!</p>
+    </div>
+    <div id="Contact" class="tabcontent">
+      <h3>Contact</h3>
+      <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+    <div id="About" class="tabcontent">
+      <h3>About</h3>
+      <p>Who we are and what we do.</p>
+    </div>
+
+    <!-- Script  -->
+    <script>
+      function openPage(pageName, elmnt, color) {
+        var i, tablinks, tabcontent;
+        // Hide all elements with class tabcontent by default
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        //Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+        // Show the specific tab content
+        document.getElementById(pageName).style.display = "block";
+        //Add the specific bgcolors to the buttons
+        elmnt.style.backgroundColor = color;
+      }
+      //Open the default page
+      document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>

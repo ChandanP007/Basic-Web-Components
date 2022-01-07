@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            font-family: verdana;
+        }
+        .sidebar{
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        .sidebar a{
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .sidebar a:hover:not(.active){
+            background-color: #ccc;
+        }
+        .sidebar a.active{
+            background-color: #2196F3;
+            color: white;
+        }
+        /* Page content. The value of the margin-left property should match the value of the sidebar's width property  */
+        div.content{
+            margin-left: 200px;
+            padding: 3em;
+            height: 1000px;
+           
+        }
+        /* Media queries  */
+        @media screen and (max-width: 700px){
+           .sidebar{
+               width: 100%;
+               height: auto;
+               position: relative;
+           }
+           .sidebar a{
+               float: none;
+               display: inline-block;
+           }
+           div.content{
+               margin-left: 0;
+           }
+        }
+        @media screen and (max-width: 400px){
+            .sidebar a{
+                display: block;
+                text-align: center;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- The Sidebar  -->
+    <div class="sidebar">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+    <div class="content">
+        <h2>Responsive Sidebar Example</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique fuga quasi itaque mollitia porro pariatur! Fugit iste sunt eveniet, laborum nisi eaque minima repudiandae asperiores magni recusandae. Dolorum, ullam maiores sunt consequatur repellendus quas.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed provident tempora cumque repudiandae minus fugit natus, ex aspernatur itaque quam ea, earum facere possimus. Praesentium officiis consectetur fugiat magnam suscipit quisquam neque reprehenderit tempora!</p>
+        <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, maxime!</h3>
+    </div>
+</body>
+</html>

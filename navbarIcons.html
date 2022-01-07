@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar with icons</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+        *{
+            margin: 0;padding: 0;
+            font-family: sans-serif;
+        }
+        .navbar{
+            width: 100%;
+            background-color: #555;
+            overflow: auto;
+        }
+        .navbar a{
+            float: left;
+            text-decoration: none;
+            color: white;
+            font-size: 17px;
+            padding: 12px;
+            text-align: center;
+        }
+        .navbar a:hover{
+            background-color: #40AA6D;
+        }
+        .navbar a.active{
+            background-color: #40AA6D;
+        }
+        /* Add resposiveness- will automatically display the navbar vertically instead of horizontally on screen less than 500pixels  */
+        @media screen and (max-width: 500px){
+            .navbar a{
+                float: none;
+                display: block;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="#" class="active"><i class="fa fa-fw fa-home"></i>Home</a>
+      <a href="#"><i class="fa fa-fw fa-search"></i>Search</a>
+      <a href="#"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+      <a href="#"><i class="fa fa-fw fa-user"></i>Login</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Border Nav Links</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            font-family: poppins;
+        }
+        .navbar{
+            background-color: #333;
+            overflow: hidden;
+
+        }
+        .navbar a{
+            color: white;
+            text-decoration: none;
+            padding: 13px;
+            font-size: 17px;
+            float: left;
+            text-transform: uppercase;
+            display: block;
+            text-align: center;
+            border-bottom: 4px solid transparent;
+        }
+        .navbar a:hover,.navbar .active{
+            border-bottom: 4px solid tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="active">C-Language</a>
+        <a href="#">C++</a>
+        <a href="#">Java</a>
+        <a href="#">Python</a>
+        <a href="#">C#</a>
+    </div>
+</body>
+</html>

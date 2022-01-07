@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Menu links</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+            font-family: poppins;
+        }
+        .topnav{
+            background-color: #333;
+            overflow: hidden;
+            position: relative;
+        }
+        .topnav a{
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            padding: 0 12px;
+            text-align: center;
+        }
+        .topnav a:hover,.active{
+            background-color: #04aa6d;
+            cursor: pointer;
+        }
+        .topnav-right{
+            float: right;
+
+        }
+        .topnav-center a{
+            float: none;
+            transform: translate(-50%,-50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        @media screen and (max-width: 600px){
+            .topnav-center a{
+                position: relative;
+                transform: none;
+                top: 0;
+                left: 0;
+            }
+            .topnav-right,.topnav a{
+                float: none;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- top navigation -->
+    <div class="topnav">
+
+    <!-- centered links -->
+    <div class="topnav-center">
+        <a href="#" class="active">Home</a>
+    </div>
+
+    <!-- left aligned links  -->
+    <a href="#">News</a>
+    <a href="#">Contact</a>
+
+    <!-- right aligned links  -->
+    <div class="topnav-right">
+        <a href="#">Search</a>
+        <a href="#">About</a>
+    </div>
+
+    </div>
+</body>
+</html>

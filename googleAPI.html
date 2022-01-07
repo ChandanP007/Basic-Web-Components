@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google APIS</title>
+    <style>
+        body{
+            font-family: poppins;
+            text-align: center;
+        }
+        :root{
+        --primarycolor: red;
+        --secondarycolor: #333;
+        }
+        #map{
+            height: 400px;
+            width: 100%;
+        }
+        h1{
+            color: var(--primarycolor);
+        }
+        
+    </style>
+   
+</head>
+<body>
+    <h1>Google API'S</h1>
+    <h2>1. Google Maps</h2>
+    <div id="map">
+        My Map will go here
+    </div>
+
+    <script>
+        function myMap(){
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {
+                center: new google.maps.LatLng(52.5, -0.2),
+                zoom: 10
+            };
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+        }
+    </script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</body>
+</html>

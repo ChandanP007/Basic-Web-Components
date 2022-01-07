@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SideBar with icons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            font-family: verdana;
+        }
+        body{
+            background-color: #ddd;
+        }
+        h2{
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+        .sidebar{
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 16px;
+        }
+        .sidebar a{
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            font-size: 20px;
+        }
+        .sidebar a:hover{
+            color: crimson;
+        }
+        .main{
+            margin-left: 160px;
+            padding: 0px 10px;
+            display: none;
+        }
+        @media screen and (max-width: 450px){
+            .sidebar{padding-top: 15px;}
+            .sidebar a{font-size: 18px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#" onclick="show('home')"><i class="fa fa-fw fa-home" id="default"></i>Home</a>
+        <a href="#" onclick="show('services')"><i class="fa fa-fw fa-wrench"></i>Services</a>
+        <a href="#" onclick="show('clients')"><i class="fa fa-fw fa-user"></i>Clients</a>
+        <a href="#" onclick="show('contact')"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+    </div>
+    <div class="main" id="home">
+        <h2>Home</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas repudiandae consequatur libero blanditiis, doloribus tenetur sapiente fugiat eius minus ipsa eum harum omnis non eos perferendis ad, maxime iste quasi odio sunt placeat deleniti.</p>
+    </div>
+    <div class="main" id="services">
+        <h2>Services</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas repudiandae consequatur libero blanditiis, doloribus tenetur sapiente fugiat eius minus ipsa eum harum omnis non eos perferendis ad, maxime iste quasi odio sunt placeat deleniti. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium, sapiente.</p>
+    </div>
+    <div class="main" id="clients">
+        <h2>Clients</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas repudiandae consequatur libero blanditiis, doloribus tenetur sapiente fugiat eius minus ipsa eum harum omnis non eos perferendis ad, maxime iste quasi odio sunt placeat deleniti.</p>
+    </div>
+    <div class="main" id="contact">
+        <h2>Contact</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas repudiandae consequatur libero blanditiis, doloribus tenetur sapiente fugiat eius minus ipsa eum harum omnis non eos perferendis ad, maxime iste quasi odio sunt placeat deleniti.</p>
+    </div>
+
+<script>
+    function show(pgname){
+        //Declare all variables
+        var i,btns,content;
+        btns= document.getElementsByTagName("a");
+        content= document.getElementsByClassName("main");
+
+        //Hide all content
+        for(i=0;i<content.length;i++){
+            content[i]= content[i].style.display= "none";
+        }
+
+        //Show specific content
+        document.getElementById(pgname).style.display= "block";
+    }document.getElementById("default").click();
+</script>
+</body>
+</html>
